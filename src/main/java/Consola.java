@@ -1,11 +1,11 @@
-import bo.edu.uagrm.ficct.segundopractico.Excepciones.ExcepcionAristaYaExiste;
-import bo.edu.uagrm.ficct.segundopractico.Excepciones.ExcepcionNroVerticesInvalido;
-import bo.edu.uagrm.ficct.segundopractico.nopesados.AW;
-import bo.edu.uagrm.ficct.segundopractico.nopesados.Digrafo;
-import bo.edu.uagrm.ficct.segundopractico.nopesados.EjerciciosDigrafo;
-import bo.edu.uagrm.ficct.segundopractico.nopesados.EjerciciosGrafo;
-import bo.edu.uagrm.ficct.segundopractico.nopesados.Grafo;
-import bo.edu.uagrm.ficct.segundopractico.nopesados.MatrizDeCaminos;
+import excepciones.ExcepcionAristaYaExiste;
+import excepciones.ExcepcionNroVerticesInvalido;
+import nopesados.AW;
+import nopesados.Digrafo;
+import nopesados.EjerciciosDigrafo;
+import nopesados.EjerciciosGrafo;
+import nopesados.Grafo;
+import nopesados.MatrizDeCaminos;
 
 /**
  *
@@ -61,5 +61,39 @@ public class Consola {
         ejecutarWarshall.showMatriz(ejecutarWarshall.algoritmoWharsall());
         System.out.println("Ejercicio 14: CUANTAS COMPONENTES FUERTEMENTE CONEXAS EXISTEN");
         System.out.println(ejecutar2.cantidadCFC());
+
+        /*DigrafoPesado digrafo = new DigrafoPesado(4);
+        digrafo.insertarArista(0, 1, 50);
+        digrafo.insertarArista(0, 2, 30);
+        digrafo.insertarArista(1, 3, 10);
+        digrafo.insertarArista(2, 1, 1);
+        System.out.println(digrafo);
+        System.out.println("Ejercicio 13 Algoritmo FLOYD WARSHALL que muestre costos y caminos de un vertice a todos los demas");
+       FW ejecutar = new FW(digrafo);
+        System.out.println("Ejercicio 15 ");
+        System.out.println(ejecutar.mostrarCostosYCaminos(2));
+       Dijkstra dijkstra = new Dijkstra(digrafo);
+      //  System.out.println(dijkstra.getCostoMinimo(0, 1));
+      //  dijkstra.imprimirCamino();
+       dijkstra.caminosYCostosDesdeUnVertice(0);
+       
+       GrafoPesado grafo = new GrafoPesado(6);
+        grafo.insertarArista(0, 1, 3);
+        grafo.insertarArista(0, 2, 2);
+        grafo.insertarArista(1, 3, 5);
+        grafo.insertarArista(2, 3, 1);
+        grafo.insertarArista(3, 4, 8);
+        grafo.insertarArista(4, 5, 9);
+        
+        System.out.println("Kruskal");
+       Kruskal kruskal = new Kruskal(grafo);
+       System.out.println(kruskal.ProcesarKruskal());
+       
+        System.out.println("PRIM");
+       Prim arbol = new Prim(grafo);
+        GrafoPesado resultado = arbol.arbol();
+        System.out.println(resultado);
+
+        */
     }
 }
